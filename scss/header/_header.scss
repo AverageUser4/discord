@@ -1,0 +1,42 @@
+@use '../general/_var';
+
+.the-header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+}
+
+.the-header__logo {
+  width: 124px;
+  height: 34px;
+}
+
+.the-header__list {
+  display: none;
+}
+
+.the-header__right-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // width equal to .the-header__logo, so
+  // the-header__list is centered
+  width: 124px;
+}
+
+.the-header__login-link-button {
+  font-size: 0.875rem;
+  margin-right: 14px;
+}
+
+.the-header__login-link-button-text-content-adjuster {
+  position: relative;
+  top: -1px;
+}
+
+.the-header__menu-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}

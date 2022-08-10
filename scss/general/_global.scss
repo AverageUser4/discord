@@ -1,0 +1,50 @@
+@use '_var';
+
+body {
+  margin: 0;
+  background-color: var.$iconic-blue;
+  font-family: Whitney, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Ginto, Whitney, sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.generic-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    text-underline-offset: 0.25em;
+    text-decoration: underline;
+  }
+}
+
+.generic-button {
+  display: block;
+  padding: 0.85em 1.6em;
+  border-radius: 30px;
+  background-color: #fff;
+  color: rgb(35, 39, 42);
+  text-decoration: none;
+  line-height: 100%;
+  border: none;
+  font-size: 1.25rem;
+  transition: 300ms;
+}
+.generic-button:hover {
+  color: var.$iconic-blue;
+  box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+.generic-button--black {
+  background-color: rgb(35, 39, 42);
+  color: white;
+}
+.generic-button--black:hover {
+  background-color: rgb(54, 57, 63);
+  color: white;
+}

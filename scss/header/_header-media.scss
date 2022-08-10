@@ -1,0 +1,23 @@
+@media(min-width: 1024px) {
+  .the-header__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .the-header__list-item {
+    &:not(&:last-of-type) {
+      margin-right: 36px;
+    }
+  }
+
+  .the-header__login-link-button {
+    margin: 0;
+  }
+
+  .the-header__menu-button {
+    display: none;
+  }
+
+}

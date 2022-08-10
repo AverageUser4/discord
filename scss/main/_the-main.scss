@@ -1,0 +1,50 @@
+.the-main {
+  margin-top: 56px;
+}
+
+.article-1 {
+  padding: 0 24px;
+}
+
+.article-1__header {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(1.5rem, 5vw, 2.75rem);
+}
+
+.article-1__paragraph {
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.625;
+}
+
+.article-1__buttons-container {
+  margin-bottom: 64px;
+}
+
+.article-1__button-1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.article-1__button-svg {
+  width: 24px;
+}
+
+.article-1__button-1,
+.article-1__button-2 {
+  height: 58px;
+  box-sizing: border-box;
+}
+
+.article-1__button-1-span {
+  margin-left: 8px;
+}
+
+.article-1__img {
+  display: block;
+  width: 100%;
+  margin-left: -80px;
+}

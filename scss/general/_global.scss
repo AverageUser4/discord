@@ -8,6 +8,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Ginto, Whitney, sans-serif;
+  line-height: 95%;
 }
 
 button:hover {
@@ -29,22 +30,39 @@ button:hover {
   padding: 0.85em 1.6em;
   border-radius: 30px;
   background-color: #fff;
-  color: rgb(35, 39, 42);
+  color: var.$black;
   text-decoration: none;
   line-height: 100%;
   border: none;
   font-size: 1.25rem;
-  transition: 300ms;
+  transition: color 300ms, background-color 300ms, box-shadow 300ms;
 }
 .generic-button:hover {
   color: var.$iconic-blue;
-  box-shadow: 0 8px 15px rgba(0,0,0,.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 .generic-button--black {
-  background-color: rgb(35, 39, 42);
+  background-color: var.$black;
   color: white;
 }
 .generic-button--black:hover {
   background-color: rgb(54, 57, 63);
   color: white;
+}
+.generic-button--blue {
+  background-color: var.$iconic-blue;
+  color: white;
+}
+.generic-button--blue:hover {
+  background-color: rgb(121, 131, 245);
+  color: white;
+}
+
+
+.download-button {
+  display: flex;
+  align-items: center;
+}
+.download-button-span {
+  margin-left: 8px;
 }

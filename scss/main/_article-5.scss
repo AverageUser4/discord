@@ -1,0 +1,32 @@
+@use '../general/var';
+
+.article-5 {
+  padding: 56px var(--horizontal-padding);
+  background-color: var.$white;
+}
+
+.article-5__content {
+  max-width: var.$max-width;
+  margin: auto;
+}
+
+.article-5__header {
+  color: var.$black;
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.article-5__paragraph {
+  color: var.$black;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.article-5__img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 756px) {
+  .article-5__content {
+    text-align: center;
+  }
+}

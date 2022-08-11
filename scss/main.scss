@@ -1,8 +1,14 @@
-@use 'general/_meta';
-@use 'general/_global';
+@use 'general/meta';
+@use 'general/global';
 
-@use 'header/_header';
-@use 'header/_header-media';
+@use 'header/header';
+@use 'header/header-media';
 
 @use 'main/the-main';
-@use 'main/main-media';
+@use 'main/article-1';
+@use 'main/article-1-media';
+@use 'main/template-article';
+@use 'main/article-5';
+@use 'main/ready-to-start';
+
+@use 'footer/_the-footer.scss';

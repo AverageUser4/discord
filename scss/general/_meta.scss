@@ -1,15 +1,22 @@
 @font-face {
-  src: url('../resources/fonts/whitneymedium.woff2') 
+  src: url('../resources/fonts/whitneybook.woff2') 
     format('woff2');
   font-family: 'Whitney';
   font-weight: 100 400;
 }
 
 @font-face {
+  src: url('../resources/fonts/whitneymedium.woff2') 
+    format('woff2');
+  font-family: 'Whitney';
+  font-weight: 500 600;
+}
+
+@font-face {
   src: url('../resources/fonts/whitneysemibold.woff2') 
     format('woff2');
   font-family: 'Whitney';
-  font-weight: 500 900;
+  font-weight: 700 900;
 }
 
 @font-face {

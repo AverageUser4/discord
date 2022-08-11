@@ -1,0 +1,112 @@
+@media (min-width: 682px) {
+  /*
+    - buttons go next to each other,
+    space between them is added
+  */
+  .article-1__buttons-container {
+    display: flex;
+  }
+  .article-1__button-1 {
+    margin: 0 24px 0 0;
+  }
+}
+
+@media (min-width: 756px) {
+  /*
+    - article-1 gets cloud background
+    - header's and paragraph's width becomes responisve
+    - article-1 buttons go on top one another
+    - img container goes higher
+    - first image gets hidden, second gets shown
+  */
+  .article-1 {
+    background-image: url('../resources/images/main/clouds-background.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  .article-1__header,
+  .article-1__paragraph {
+    width: clamp(300px, 45vw, 700px);
+  }
+
+  .article-1__buttons-container {
+    display: block;
+  }
+
+  .article-1__button-1 {
+    margin: 0 0 24px;
+  }
+
+  .article-1__img-container {
+    pointer-events: none;
+    margin-top: -240px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .article-1__img-1 {
+    display: none;
+  }
+  
+  .article-1__img-2 {
+    display: block;
+    margin-right: -180px;
+  }
+}
+
+@media (min-width: 1008px) {
+  /*
+    - text inside paragraph and header gets centered
+    - buttons get centered and put next to each other again
+    - both images are now visible, one is on left another on right
+  */
+  .article-1__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(50vw, 780px);
+    max-width: 780px;
+    margin: auto;
+  }
+
+  .article-1__header {
+    margin-top: 110px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+  }
+
+  .article-1__header,
+  .article-1__paragraph {
+    text-align: center;
+    width: auto;
+  }
+
+  .article-1__paragraph {
+    margin-bottom: 34px;
+  }
+
+  .article-1__buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .article-1__button-1 {
+    margin: 0 24px 0 0;
+  }
+
+  .article-1__img-container {
+    justify-content: center;
+    margin-top: -220px;
+  }
+
+  .article-1__img-1 {
+    position: relative;
+    left: -400px;
+    display: block;
+    width: auto;
+  }
+  .article-1__img-2 {
+    position: relative;
+    right: -300px;
+  }
+}

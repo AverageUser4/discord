@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 24px;
+  padding: 18px var(--horizontal-padding);
 }
 
 .the-header__logo {
@@ -28,6 +28,7 @@
 .the-header__login-link-button {
   font-size: 0.875rem;
   margin-right: 14px;
+  font-weight: 500;
 }
 
 .the-header__login-link-button-text-content-adjuster {

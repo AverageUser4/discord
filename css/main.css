@@ -1,17 +1,31 @@
 @font-face {
-  src: url("../resources/fonts/whitneymedium.woff2") format("woff2");
+  src: url("../resources/fonts/whitneybook.woff2") format("woff2");
   font-family: "Whitney";
   font-weight: 100 400;
 }
 @font-face {
+  src: url("../resources/fonts/whitneymedium.woff2") format("woff2");
+  font-family: "Whitney";
+  font-weight: 500 600;
+}
+@font-face {
   src: url("../resources/fonts/whitneysemibold.woff2") format("woff2");
   font-family: "Whitney";
-  font-weight: 500 900;
+  font-weight: 700 900;
 }
 @font-face {
   src: url("../resources/fonts/ginto.woff2") format("woff2");
   font-family: "Ginto";
   font-weight: 100 900;
+}
+:root {
+  --horizontal-padding: 24px;
+}
+
+@media (min-width: 756px) {
+  :root {
+    --horizontal-padding: 40px;
+  }
 }
 body {
   margin: 0;
@@ -21,6 +35,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Ginto, Whitney, sans-serif;
+  line-height: 95%;
 }
 
 button:hover {
@@ -47,7 +62,7 @@ button:hover {
   line-height: 100%;
   border: none;
   font-size: 1.25rem;
-  transition: 300ms;
+  transition: color 300ms, background-color 300ms, box-shadow 300ms;
 }
 
 .generic-button:hover {
@@ -65,11 +80,30 @@ button:hover {
   color: white;
 }
 
+.generic-button--blue {
+  background-color: #404EED;
+  color: white;
+}
+
+.generic-button--blue:hover {
+  background-color: rgb(121, 131, 245);
+  color: white;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+}
+
+.download-button-span {
+  margin-left: 8px;
+}
+
 .the-header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 24px;
+  padding: 18px var(--horizontal-padding);
 }
 
 .the-header__logo {
@@ -91,6 +125,7 @@ button:hover {
 .the-header__login-link-button {
   font-size: 0.875rem;
   margin-right: 14px;
+  font-weight: 500;
 }
 
 .the-header__login-link-button-text-content-adjuster {
@@ -126,7 +161,8 @@ button:hover {
 }
 
 .article-1 {
-  padding: 0 24px;
+  padding: 0 var(--horizontal-padding);
+  overflow: hidden;
 }
 
 .article-1__header {
@@ -147,13 +183,7 @@ button:hover {
 }
 
 .article-1__button-1 {
-  display: flex;
-  align-items: center;
   margin-bottom: 24px;
-}
-
-.article-1__button-svg {
-  width: 24px;
 }
 
 .article-1__button-1,
@@ -162,17 +192,21 @@ button:hover {
   box-sizing: border-box;
 }
 
-.article-1__button-1-span {
-  margin-left: 8px;
-}
-
-.article-1__img {
+.article-1__img-1 {
   display: block;
   width: 100%;
   margin-left: -80px;
 }
 
+.article-1__img-2 {
+  display: none;
+}
+
 @media (min-width: 682px) {
+  /*
+    - buttons go next to each other,
+    space between them is added
+  */
   .article-1__buttons-container {
     display: flex;
   }
@@ -181,10 +215,212 @@ button:hover {
   }
 }
 @media (min-width: 756px) {
+  /*
+    - article-1 gets cloud background
+    - header's and paragraph's width becomes responisve
+    - article-1 buttons go on top one another
+    - img container goes higher
+    - first image gets hidden, second gets shown
+  */
+  .article-1 {
+    background-image: url("../resources/images/main/clouds-background.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
   .article-1__header,
 .article-1__paragraph {
     width: clamp(300px, 45vw, 700px);
   }
+  .article-1__buttons-container {
+    display: block;
+  }
+  .article-1__button-1 {
+    margin: 0 0 24px;
+  }
+  .article-1__img-container {
+    pointer-events: none;
+    margin-top: -240px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .article-1__img-1 {
+    display: none;
+  }
+  .article-1__img-2 {
+    display: block;
+    margin-right: -180px;
+  }
+}
+@media (min-width: 1008px) {
+  /*
+    - text inside paragraph and header gets centered
+    - buttons get centered and put next to each other again
+    - both images are now visible, one is on left another on right
+  */
+  .article-1__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(50vw, 780px);
+    max-width: 780px;
+    margin: auto;
+  }
+  .article-1__header {
+    margin-top: 110px;
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+  }
+  .article-1__header,
+.article-1__paragraph {
+    text-align: center;
+    width: auto;
+  }
+  .article-1__paragraph {
+    margin-bottom: 34px;
+  }
+  .article-1__buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+  .article-1__button-1 {
+    margin: 0 24px 0 0;
+  }
+  .article-1__img-container {
+    justify-content: center;
+    margin-top: -220px;
+  }
+  .article-1__img-1 {
+    position: relative;
+    left: -400px;
+    display: block;
+    width: auto;
+  }
+  .article-1__img-2 {
+    position: relative;
+    right: -300px;
+  }
+}
+.template-article {
+  padding: 56px var(--horizontal-padding);
+  background-color: #fff;
+}
+
+.template-article__img {
+  width: 100%;
+}
+
+.template-article__header {
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
+  font-family: Whitney, Ginto, sans-serif;
+  font-weight: 900;
+  line-height: 120%;
+  color: rgb(35, 39, 42);
+}
+
+.template-article__paragraph {
+  color: rgb(35, 39, 42);
+  font-weight: 100;
+  line-height: 140%;
+}
+
+.article-3 {
+  background-color: rgb(246, 246, 246);
+}
+
+@media (min-width: 756px) {
+  .template-article__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1180px;
+  }
+  .template-article__content--reversed {
+    flex-direction: row-reverse;
+  }
+  .template-article__img-container {
+    margin-right: 48px;
+    min-width: 360px;
+  }
+  .template-article__img-container--reversed {
+    margin: 0;
+    padding-left: 48px;
+  }
+  .template-article__header-and-paragraph {
+    max-width: 380px;
+  }
+  .template-article__header {
+    font-size: 3rem;
+    margin: 0 0 24px;
+  }
+  .template-article__paragraph {
+    font-size: 1.25rem;
+  }
+}
+.article-5 {
+  padding: 56px var(--horizontal-padding);
+  background-color: rgb(246, 246, 246);
+}
+
+.article-5__content {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.article-5__header {
+  color: rgb(35, 39, 42);
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.article-5__paragraph {
+  color: rgb(35, 39, 42);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.article-5__img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 756px) {
+  .article-5__content {
+    text-align: center;
+  }
+}
+.ready-to-start {
+  background-color: rgb(246, 246, 246);
+  padding: 0 var(--horizontal-padding) 48px;
+}
+
+.ready-to-start__content {
+  margin: auto;
+  max-width: 1180px;
+}
+
+.ready-to-start__header {
+  margin: 0 0 36px;
+  font-family: Whitney, Ginto, sans-serif;
+  font-size: 2rem;
+  line-height: 120%;
+}
+
+@media (min-width: 756px) {
+  .ready-to-start {
+    background-image: url("../resources/images/main/sparkles.svg");
+    background-repeat: no-repeat;
+    background-position: center top 10px;
+    padding-top: 48px;
+    padding-bottom: 120px;
+  }
+  .ready-to-start__header {
+    text-align: center;
+  }
+  .ready-to-start__button {
+    margin: auto;
+  }
+}
+.the-footer {
+  background-color: rgb(35, 39, 42);
 }
 
 /*# sourceMappingURL=main.css.map */

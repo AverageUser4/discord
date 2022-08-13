@@ -1,12 +1,18 @@
 @use '../general/var';
 
 .the-footer {
+  display: flex;
+  justify-content: center;
   background-color: var.$black;
   padding: 80px var(--horizontal-padding) 64px;
 }
 
 .the-footer__content {
   max-width: var.$max-width;
+}
+
+.the-footer__top {
+  border-bottom: 1px solid #5865f2;
 }
 
 .the-footer__header {
@@ -66,12 +72,52 @@
 }
 
 .the-footer__icons-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+.the-footer__nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 48px;
+  margin: 48px 0;
+}
+
+.the-footer__nav-header {
+  margin: 0 0 16px;
+  font-family: Whitney, sans-serif;
+  color: var.$iconic-blue;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.the-footer__nav-list {
+  display: grid;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.the-footer__logo-and-sign-up {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .the-footer__logo {
+  position: relative;
+  top: 3px;
   width: 124px;
   height: 34px;
+  g { 
+    fill: white;
+  }
+}
+
+.the-footer__sign-up-button {
+  font-size: 0.875rem;
 }

@@ -1,0 +1,104 @@
+@use '../general/var';
+
+.menu-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0,0,0,0.4);
+  transition: background-color 300ms;
+}
+.menu-background--hidden {
+  background-color: transparent;
+}
+
+.menu {
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  width: 330px;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px 0 0 8px;
+  transition: right 300ms;
+}
+.menu--hidden {
+  right: -330px;
+}
+
+.menu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.menu__logo-container {
+  display: block;
+}
+
+.menu__logo {
+  width: 124px;
+  height: 34px;
+}
+
+.menu__close-button {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.menu__close-button-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.menu__list {
+  border-top: 1px solid #ebedef;
+  list-style: none;
+  margin: 0 40px 0 0;
+  padding: 16px 0;
+}
+
+.menu__list-element {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Whitney, sans-serif;
+  color: var.$black;
+  font-size: 1rem;
+  text-align: left;
+  text-decoration: none;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.menu__list-element--active {
+  color: rgb(0, 176, 244);
+  background-color: #f6f6f6;
+}
+
+.menu__list-button {
+  position: relative;
+}
+
+.menu__list-button-svg {
+  position: relative;
+  top: 7px;
+  transform: rotateZ(-90deg);
+}
+
+.menu__bottom-button {
+  position: absolute;
+  bottom: 24px;
+  font-size: 0.875rem;
+}

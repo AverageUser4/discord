@@ -18,12 +18,15 @@ button:hover {
 .generic-link {
   color: white;
   text-decoration: none;
-  font-weight: bold;
   &:hover {
     text-underline-offset: 0.25em;
     text-decoration: underline;
   }
 }
+.generic-link--bold {
+  font-weight: bold;
+}
+
 
 .generic-button {
   display: block;

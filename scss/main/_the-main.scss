@@ -1,3 +1,14 @@
 .the-main {
   margin-top: 56px;
 }
+
+.animation-article-content {
+  position: relative;
+  transition: 500ms;
+  top: 0;
+  opacity: 1;
+}
+.animation-article-content--hidden {
+  top: 150px;
+  opacity: 0;
+}
